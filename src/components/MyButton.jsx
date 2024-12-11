@@ -3,9 +3,12 @@
 
 const MyButton = (props) => {
   return (
+  <>
+    <h1>hi</h1>
    <button onClick={()=> props.myfunction()}  className=' w-[300px] h-[30px] border bg-green-400 rounded-3xl border-black mt-10 ml-14 ' >
         {props.mytitle}
    </button>
+  </>
   )
 }
 
