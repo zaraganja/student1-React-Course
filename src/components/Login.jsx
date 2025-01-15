@@ -5,6 +5,7 @@ import { IoChevronBack } from "react-icons/io5";
 const Login = () => {
   return (
     <div>
+        {mytext}
         <Link to={"/"}><IoChevronBack size={35} color='red' /></Link><br /><br />
       Login page
     </div>
