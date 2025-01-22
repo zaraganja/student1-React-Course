@@ -8,6 +8,7 @@ import Login from "./components/Login"
 import NotFound from "./components/NotFound"
 import LearnUseref from "./components/LearnUseref"
 import Header from "./components/Header"
+import { UserProvider } from "./UserContext"
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
   }
 
   return (
+    <UserProvider>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Header/>}  >
@@ -35,6 +37,7 @@ const App = () => {
       <Route path="*" element={<NotFound/>}></Route>
     </Routes>
     </BrowserRouter>
+    </UserProvider>
     // <div className=" flex flex-col bg-red-100 w-screen h-auto min-h-screen  " >
     //   <h1>hi</h1>
     //   {/* <button onClick={()=>sayHi()} className="w-[300px] h-[30px] border-[2px] border-blue-700 mt-10 ml-10 bg-white " >سلام</button> */}

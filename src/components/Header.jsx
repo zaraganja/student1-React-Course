@@ -1,10 +1,15 @@
 import {useState} from "react";
 import { Link,Outlet } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     const [showSubMenu, setshowSubMenu] = useState(false)
     const [mytext, setmytext] = useState(0);
+
+    const username= useSelector((state)=> state.user.username);
+    const basketNum= useSelector((state)=>state.basketNum.basketNum);
+
   return (
     <div className=" w-[100vw] h-screen bg-gray-500 ">
       <ul className=" flex flex-row gap-10 list-none">
@@ -19,6 +24,8 @@ const Header = () => {
             <p> {mytext} </p>
         </section>
       </ul>
+      <h1>داده ی ریداکس {username} </h1>
+      <h1>داده ی ریداکس {basketNum} </h1>
       <Outlet/>
     </div>
   );

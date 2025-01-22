@@ -1,6 +1,10 @@
-// import React from 'react'
+import {useContext} from 'react'
+import { UserContext } from "../UserContext";
+
 
 const CommentsList = () => {
+  const {user} = useContext(UserContext);
+ 
   const comments = [
     {
       id: 0,
@@ -25,6 +29,7 @@ const CommentsList = () => {
   ];
   return (
     <div className=" flex flex-col w-full h-[300px] place-content-center place-items-center bg-blue-200 mt-[50px] ">
+      <span>سلام {user}</span>
       {comments?.map((item, index) => {
         return (
           <section className=" rtl text-right" key={index}>
