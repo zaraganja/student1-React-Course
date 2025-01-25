@@ -4,7 +4,7 @@ Redux and Zustand =>اعث میشه از یک استیت در همه ی کامپ
 
 Redux => 
 npm i Redux
-npm i react-Redux
+npm i react-redux
 npm i redux-persist
 npm i @reduxjs/toolkit
 
