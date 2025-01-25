@@ -24,8 +24,8 @@ const Header = () => {
             <p> {mytext} </p>
         </section>
       </ul>
-      <h1>داده ی ریداکس {username} </h1>
-      <h1>داده ی ریداکس {basketNum} </h1>
+      <h1 className=" p-20 bg-red-200" > نام کاربری ریداکس {username} </h1>
+      <h1> تعداد محصولات ریداکس {basketNum} </h1>
       <Outlet/>
     </div>
   );

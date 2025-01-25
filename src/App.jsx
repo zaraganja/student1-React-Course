@@ -9,6 +9,9 @@ import NotFound from "./components/NotFound"
 import LearnUseref from "./components/LearnUseref"
 import Header from "./components/Header"
 import { UserProvider } from "./UserContext"
+import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from "react-redux"
+import { store,persistor } from "./Redux/store"
 
 const App = () => {
 
@@ -25,19 +28,23 @@ const App = () => {
   }
 
   return (
-    <UserProvider>
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Header/>}  >
-        <Route index element={<CommentsList/>}  ></Route>
-        <Route path="comments" element={<CommentAPI/>} ></Route>
-        <Route path="useref" element={<LearnUseref/>} ></Route>
-      </Route>
-      <Route path="login" element={<Login/>} ></Route>
-      <Route path="*" element={<NotFound/>}></Route>
-    </Routes>
-    </BrowserRouter>
-    </UserProvider>
+    <Provider store={store} >
+    <PersistGate loading={null} persistor={persistor} >
+      <UserProvider>
+        <BrowserRouter>
+           <Routes>
+                 <Route path="/" element={<Header/>}  >
+                   <Route index element={<CommentsList/>}  ></Route>
+                   <Route path="comments" element={<CommentAPI/>} ></Route>
+                   <Route path="useref" element={<LearnUseref/>} ></Route>
+                 </Route>
+                 <Route path="login" element={<Login/>} ></Route>
+                 <Route path="*" element={<NotFound/>}></Route>
+               </Routes>
+                </BrowserRouter>
+                </UserProvider>
+     </PersistGate>
+    </Provider>
     // <div className=" flex flex-col bg-red-100 w-screen h-auto min-h-screen  " >
     //   <h1>hi</h1>
     //   {/* <button onClick={()=>sayHi()} className="w-[300px] h-[30px] border-[2px] border-blue-700 mt-10 ml-10 bg-white " >سلام</button> */}
