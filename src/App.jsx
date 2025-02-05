@@ -14,6 +14,8 @@ import { Provider } from "react-redux"
 import { store,persistor } from "./Redux/store"
 import UseCallBackSample from "./components/UseCallBackSample"
 import UseMemoSample from "./components/UseMemoSample"
+import AddtoBasket from "./components/AddtoBasket"
+import BasketList from "./components/BasketList"
 
 const App = () => {
 
@@ -41,6 +43,8 @@ const App = () => {
                    <Route path="useref" element={<LearnUseref/>} ></Route>
                    <Route path="usecallbackSample" element={<UseCallBackSample/>} ></Route>
                    <Route path="useMemosample" element={<UseMemoSample/>} ></Route>
+                   <Route path="addToBasket" element={<AddtoBasket/>} ></Route>
+                   <Route path="basketList" element={<BasketList/>} ></Route>
 
 
                  </Route>

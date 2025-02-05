@@ -4,11 +4,13 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from "redux";
 import { userReducer } from "./userSlice";
 import { basketNumReducer } from "./basketNumSlice";
+import { basketArrReducer } from "./baskerArrSlice";
 
 
 const rootReducer =combineReducers({
     user: userReducer,
     basketNum:basketNumReducer,
+    basketArr:basketArrReducer,
 })
 
 const persistConfig= {
