@@ -12,6 +12,8 @@ import { UserProvider } from "./UserContext"
 import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux"
 import { store,persistor } from "./Redux/store"
+import UseCallBackSample from "./components/UseCallBackSample"
+import UseMemoSample from "./components/UseMemoSample"
 
 const App = () => {
 
@@ -37,10 +39,14 @@ const App = () => {
                    <Route index element={<CommentsList/>}  ></Route>
                    <Route path="comments" element={<CommentAPI/>} ></Route>
                    <Route path="useref" element={<LearnUseref/>} ></Route>
+                   <Route path="usecallbackSample" element={<UseCallBackSample/>} ></Route>
+                   <Route path="useMemosample" element={<UseMemoSample/>} ></Route>
+
+
                  </Route>
                  <Route path="login" element={<Login/>} ></Route>
                  <Route path="*" element={<NotFound/>}></Route>
-               </Routes>
+              </Routes>
                 </BrowserRouter>
                 </UserProvider>
      </PersistGate>

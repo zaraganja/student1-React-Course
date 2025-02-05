@@ -8,3 +8,26 @@ npm i react-redux
 npm i redux-persist
 npm i @reduxjs/toolkit
 
+useCallBack hook :
+اگر یک عملیاتی رو نخواهیم توی هر بار رندر صفحه دوباره اجرا بشه و فقط زمانی اجرا بشه که یکی از 
+dependency هاش
+تغییر کرد اجرا بشه ازش استفاده 
+این کار باعث افزایش سرعت پروژه میشه 
+ useMemo hook: 
+ عین usecallback 
+ هست /تفاوت اصلی آنها اینه که 
+ usememo یک ولیو یک مقدار رو 
+ memoized میکنه
+ اما usecallback
+ یک تابع رو 
+ memoized 
+ 
+
+ *****redux array
+ ******font react
+ ******component sub menue 
+ ******tailwind config -animation
+ ******innetHTML=>Next -React
+ ******link khanum akbari
+ *****معرفی تسک ها
+ *****مشکلات سایت سوال آقای طاهری
