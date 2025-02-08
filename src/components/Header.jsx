@@ -13,19 +13,16 @@ const Header = () => {
   return (
     <div className=" w-[100vw] h-screen bg-gray-500 ">
       <ul className=" flex flex-row gap-10 list-none">
-        <li  ><Link to={"/"}>صفحه اصلی</Link></li>
+        <li  ><Link className=" font-Pocheavsk" to={"/"}>صفحه اصلی</Link></li>
         <li><Link to={"comments"} >نظرات</Link></li>
-        <li><Link to={"/login"}>ورود</Link></li>
+        <li><Link className=" font-DoranBold" to={"/login"}>ورود</Link></li>
         <li><Link to={"*"}>۴۰۴</Link></li>
-        <li><Link to={"useref"}>useref</Link></li>
+        <li><Link className=" font-Pocheavsk" to={"useref"}>useref</Link></li>
         <li><Link to={"usecallbackSample"}>go to usecallback sample</Link></li>
         <li><Link to={"useMemosample"}>go to useMEMO sample</Link></li>
         <li><Link to={"addToBasket"} >صفحه محصولات</Link></li>
-        <li><Link to={"basketList"} >سبد خرید </Link></li>
-
-        
-        
-
+        <li><Link className=" font-DoranBold" to={"basketList"} >سبد خرید </Link></li>
+        <li><Link className=" font-DoranBold animate-spin " to={"sliderRange"} >اسلایدر درصدی</Link></li>
 
         
 

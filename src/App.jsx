@@ -16,6 +16,7 @@ import UseCallBackSample from "./components/UseCallBackSample"
 import UseMemoSample from "./components/UseMemoSample"
 import AddtoBasket from "./components/AddtoBasket"
 import BasketList from "./components/BasketList"
+import SliderRange from "./components/SliderRange"
 
 const App = () => {
 
@@ -45,8 +46,7 @@ const App = () => {
                    <Route path="useMemosample" element={<UseMemoSample/>} ></Route>
                    <Route path="addToBasket" element={<AddtoBasket/>} ></Route>
                    <Route path="basketList" element={<BasketList/>} ></Route>
-
-
+                   <Route path="sliderRange" element={<SliderRange/>} ></Route>
                  </Route>
                  <Route path="login" element={<Login/>} ></Route>
                  <Route path="*" element={<NotFound/>}></Route>

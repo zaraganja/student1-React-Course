@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        Pocheavsk:["Pochaevsk","sans-serif"],
+        DoranBold:["DoranBold","sans-serif"]
+      },
       colors:{
         mainMyShopColor: "#536ac4"
       }
